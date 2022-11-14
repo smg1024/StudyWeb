@@ -1,0 +1,93 @@
+#content{
+    width: 1000px;
+    margin: 10px auto;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+#content > div{
+    /* border: solid 1px red; */
+    overflow: hidden;
+}
+
+#content > #main_nav{
+    width: 150px;
+    float: left;
+}
+
+#content > #main{
+    width: 550px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+#content > #main_banner{
+    width: 250px;
+    /* float: left; */
+}
+
+#content > #main_nav li{
+    height: 35px;
+}
+
+#content > #main > div{
+    border: solid 1px #cccccc;
+    margin-top: 5px;
+}
+
+#content > #main > div:nth-child(1){
+    height: 300px;
+    margin-bottom: 5px;
+}
+
+#content > #main > div:nth-child(2){
+    height: 200px;
+    margin-bottom: 7px;
+}
+
+#content > #main > div:nth-child(3){
+    border-style: none;
+    background-color: #500095;
+    /* height: 50px; */
+}
+
+#content > #main > div:nth-child(3) > ul{
+    overflow: hidden;
+    height: 50px;
+}
+
+#content > #main > div:nth-child(3) li{
+    color: #ffffff;
+    float: left;
+    margin-right: 25px;
+    line-height: 50px;
+}
+
+#content > #main > div:nth-child(3) ~ div{
+    height: 120px;
+    margin-bottom: 3px;
+}
+
+#content > #main_banner > div{
+    border: solid 1px #cccccc;
+    border-right-width: 0px;
+    margin-top: 5px;
+}
+
+#content > #main_banner > div:nth-child(1),
+#content > #main_banner > div:nth-child(2){
+    height: 100px;
+}
+
+#content > #main_banner > div:nth-child(3){
+    height: 150px;
+}
+
+#content > #main_banner > div:nth-child(4){
+    height: 170px;
+}
+
+#content > #main_banner > div:nth-child(5){
+    height: 200px;
+}

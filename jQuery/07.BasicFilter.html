@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 필터 선택자</title>
+	<script src="./jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("p:even").css("color", "red");
+			$("p:first").css("color", "blue");
+			$("p:last").css("color", "pink");
+			$("p:eq(1)").css("color", "green");
+
+			$(".first > li:even").css("color", "red");
+			$(".first > li:odd").css("color", "blue");
+
+			$(".second > li:eq(2)").css("color", "red");
+			
+			$(".third > li:gt(2)").css("color", "green");	// greater than index(2)
+			$(".third > li:lt(2)").css("color", "yellow");	// lesser than index(2)
+		});
+	</script>
+</head>
+<body>
+    <p>1월</p>
+	<p>2월</p>
+	<p>3월</p>
+	<p>4월</p>
+	<p>5월</p>
+	<p>6월</p>
+	<p>7월</p>
+	<p>8월</p>
+	<p>9월</p>
+	<p>10월</p>
+	<p>11월</p>
+	<p>12월</p>
+	<br/><br/>
+	
+	<div>
+		<ul class="first">
+			<li>사과</li>
+			<li>바나나</li>
+			<li>딸기</li>
+			<li>메론</li>
+		</ul>
+	</div>
+	
+	<div>
+		<ul class="second">
+			<li>짜장면</li>
+			<li>우동</li>
+			<li>짬뽕</li>
+			<li>탕수육</li>
+		</ul>
+	</div>
+	
+	<div>
+		<ul class="third">
+			<li>커피</li>
+			<li>콜라</li>
+			<li>사이다</li>
+			<li>환타</li>
+			<li>우유</li>
+		</ul>
+	</div>
+</body>
+</html>

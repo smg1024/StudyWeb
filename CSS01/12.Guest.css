@@ -1,0 +1,29 @@
+.formStyle{
+    border: solid 0px red;
+    width: 450px;
+    height: 155px;
+    margin: 30px auto 0px;
+}
+
+#login{
+    border: solid 0px blue;
+    width: 440px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#text{
+    border: solid 0px green;
+    width: 440px;
+    height: 85px;
+    margin: 2px;
+}
+
+#send{
+    border: solid 0px blue;
+    width: 440px;
+    height: 30px;
+    text-align: right;
+    line-height: 30px;
+}

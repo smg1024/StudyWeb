@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>웹포트</title>
+	<!-- https://www.google.com/fonts/  - 구글에서 접속 quick use, 원하는 글꼴을 선택 후 웹브라우 주소 선택 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap" rel="stylesheet">
+    <style>
+        #con{
+            width: 90%;
+            margin: 0px auto;
+            border: solid 1px red;
+        }
+
+        header{
+            border: solid 2px #cccccc;
+            width: 95%;
+        }
+
+        #gnb ul, #lnb ul{
+            border: dotted 0px blue;
+            overflow: hidden;
+        }
+
+        #lnb ul{
+            margin-right: 4%;
+        }
+
+        header li{
+            list-style-type: none;
+            border: dotted 1px #cccccc;
+            width: 60px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-right-width: 0px;
+        }
+
+        #gnb li{
+            float: left;
+            font-family: 'Fuzzy Bubbles';
+        }
+
+        #lnb li{
+            float: right;
+            font-family: 'Fuzzy Bubbles';
+        }
+
+        header a{
+            text-decoration: none;
+        }
+
+        #content{
+            width: 95%;
+            border: solid 0px red;
+            overflow: hidden;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }
+
+        #content > #section, #content > #aside{
+            font-family: 'Fuzzy Bubbles';
+            border: solid 2px #cccccc;
+            height: 500px;
+            float: left;
+        }
+
+        #content > #section{
+            width: 70%;
+            margin-right: 2px;
+        }
+
+        #content > #aside{
+            width: 29%;
+        }
+
+        footer{
+            border: solid 2px #cccccc;
+            width: 95%;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div id="con">
+        <header>
+            <div id="gnb">
+                <ul>
+                    <li><a href="#">gnb01</a></li>
+                    <li><a href="#">gnb02</a></li>
+                    <li><a href="#">gnb03</a></li>
+                    <li><a href="#">gnb04</a></li>
+                    <li style="border-right-width: 1px;"><a href="#">gnb05</a></li>
+                </ul>
+            </div>
+
+            <div id="lnb">
+                <ul>
+                    <li style="border-right-width: 1px;"><a href="#">lnb01</a></li>
+                    <li><a href="#">lnb02</a></li>
+                    <li><a href="#">lnb03</a></li>
+                    <li><a href="#">lnb04</a></li>
+                    <li><a href="#">lnb05</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div id="content">
+            <div id="section">
+                The United States remains open to dialogue with North Korea but is also committed to the regime's denuclearization and the maintenance of the U.S. nuclear umbrella over South Korea, U.S. officials said Tuesday.
+                Speaking at an online press briefing, National Security Council (NSC) coordinator for strategic communications John Kirby stated Washington’s goal is “the complete and verifiable denuclearization of the Korean Peninsula” and said the U.S. government “believes that there’s still a diplomatic path forward” to that goal.
+                Kirby’s remarks came after North Korean leader Kim Jong-un dismissed the necessity of dialogue with either South Korea or the United States in comments reported Monday by Pyongyang’s state-controlled Korean Central News Agency (KCNA).
+            </div>
+
+            <div id="aside">
+                Referring to denuclearization and Pyongyang’s refusal to negotiate with Washington, 
+                Kirby said, “We have said we would be willing to sit down with Kim Jong-un without preconditions to negotiate
+                that kind of outcome, but he has not responded to that offer, except to say that he has only continued his provocations, 
+                continued his missile launches, continued to try to pursue his nuclear ambitions, and all that’s doing is causing greater insecurity and instability.”
+            </div>
+        </div>
+
+        <footer>office information</footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        div{
+            float:left;
+			margin: 5px;
+			/* border: solid 1px blue; */
+        }
+        img{
+            width:200px;
+			height:200px;
+        }
+    </style>
+
+	<script src="./jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".img_may").click(function(){
+				$(this).append($(".june").css("display", "block"));		// append는 this의 자식으로 붙인다
+			});
+		});
+	</script>
+</head>
+<body>
+    <h1>풍경이 있는 자리</h1>
+	<div class="img_may">
+		<img src="../Images/Chrysanthemum.jpg"/>
+		<h4>튤립</h4>
+	</div>
+		
+	<div class="img_may">
+		<img src="../Images/Hydrangeas.jpg"/>
+		<h4>사막</h4>
+	</div>
+	
+	<div class="img_may">
+		<img src="../Images/Desert.jpg"/>
+		<h4>수국</h4>
+	</div>
+	
+	<div class="june" style="display:none;">
+		<p>
+			튤립 어김없이 <br/>
+			<b>푸르름의 절정으로</b> <br/>
+			<b>꽃들은 피어나고</b><br/>
+			나무의 녹음은 더욱 <br/>
+			짙어지겠지요.
+		</p>
+	</div>
+</body>
+</html>

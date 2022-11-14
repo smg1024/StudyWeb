@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>자식 후손(하위)선택자</title>
+	<style>
+		/* 
+			자식only: 선택자 > 선택자 {속성:값......}
+				ex) #one > .menu {......}
+			자손(자식포함 모두): 선택자 선택자 {속성:값......}
+				ex) 
+		*/
+		li{
+			list-style-type: none;
+		}
+
+		.menu{
+			color: blue;
+		}
+
+		#one > .menu{
+			color: blue;
+		}
+
+		#two > .menu{
+			color: red;
+		}
+
+		#apple > div{
+			background-color: brown;
+		}
+
+		#melon span{
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<ul id="one">
+		<li class="menu">MENU1</li>
+		<li>MENU2</li>
+		<li class="menu">MENU3</li>
+		<li>MENU4</li>
+		<li class="menu">MENU5</li>
+	</ul>
+	
+	<ol id="two">
+		<li class="menu">MENU1</li>
+		<li>MENU2</li>
+		<li class="menu">MENU3</li>
+		<li>MENU4</li>
+		<li class="menu">MENU5</li>
+	</ol>
+
+	<div>
+		<div id="apple">
+			<div>Apple</div>
+		</div>
+
+		<div id="melon">
+			<div>사과</div>
+			<div>
+				<span>메론</span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

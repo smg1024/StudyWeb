@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>이미지 및 영상 예제입니다</title>
+    </head>
+    <body>
+        <!-- 
+            절대 경로: /Users/poby/web
+            상대 경로: 내 파일 중심으로 이동한다, 웹 사이트 상대 경로
+
+            ./: 현재 폴더를 의미한다
+            ../: 상위 폴더를 의미한다
+         -->
+         <h3>이미지 가져오기</h3>
+         <img src="./coding.jpg" width="80%"><br>
+         <img src="./coding.jpg" width="150" height="150"><br>
+
+         <h3>이미지 가져오기</h3>
+         <img src="./../Images/coding.jpg" width="80%"><br>
+         <img src="./../Images/imsi/coding.jpg" width="80%"><br>
+         <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"><br>
+         <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png" width="40%"><br>
+        
+         <!-- 오디오 및 비디오 불러오기 -->
+         <h3>오디오 및 비디오</h3>
+         <audio controls>
+            <source src="./../Images/Kalimba.mp3" type="audio/mpeg">
+         </audio><br>
+         
+
+         <video controls>
+            <source src="./../Images/penguins.mp4" type="video/mp4">
+         </video>
+    </body>
+</html>

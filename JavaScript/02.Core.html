@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 반복문</title>
+    <script>
+        //조건문
+        var su=200;         // 조건이 맞으면 실행, 안 맞으면 실행 X
+        if(su > 100){       // if(20 > 100), if(200 > 100)
+            document.write(su + "<br>");
+        }
+
+        var a=70;
+        var b=70;
+        var c=90;
+        var sum=a+b+c;
+        var avg=sum/3;
+        document.write(avg + "<br>");
+
+        if(su > 50){        // 조건이 맞으면 실행, 안 맞으면 다른 것을 실행
+            document.write(su + "점: 합격<br>");
+        }else{
+            document.write(su + "점, 불합격<br>");
+        }
+
+        //반복문
+        document.write("How are you?<br>");
+
+        for(var i=0; i<10; i++){        // 0~9 : 10번 반복
+            document.write("How are you?<br>");
+        }
+
+        // 배열 - 나중에 Java할 때 진도 나갈 예정
+    </script>
+</head>
+<body>
+    <h3>JavaScript - 조건문, 반복문</h3>
+</body>
+</html>

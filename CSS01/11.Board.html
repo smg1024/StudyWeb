@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스타일 시트 예제</title>
+	<style>
+		body{
+			margin-top: 0px;
+			margin-left: 0px;
+		}
+
+		div{
+			border: solid 1px red;
+			width: 500px;
+			height: 60px;
+
+			margin: 100px 0px 0px 100px; /* 시계방향 */
+		}
+
+		#hangul > label, #alphabet > span{
+			border: solid 1px blue;
+			display: block;
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			line-height: 30px;
+			float: left;
+
+			margin: 10px 0px 0px 10px
+
+		}
+	</style>
+</head>
+<body>
+	<div id="hangul">	
+		<label>가</label>
+		<label>나</label>
+		<label>다</label>
+	</div>
+	<br/><br/>
+	
+	<div id="alphabet">
+		<span>AA</span>
+		<span>BB</span>
+		<span>CC</span>
+	</div>
+</body>
+</html>

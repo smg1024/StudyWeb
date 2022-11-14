@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>동위 선택자</title>
+	<style>
+		/* 
+			형제 선택자(모든 동생): 선택자 ~ 선택자 {속성:값.......}
+			인접 형제 선택자(바로 아래 동생): 선택자 + 선택자 {속성:값.....}
+		*/
+		#content > .title ~ div{
+			font-size: 20px;
+			color: blue;
+		}
+
+		#content > .title + div{
+			font-size: 9px;
+			color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="content">
+		<div>안녕하세요.</div>
+	
+		<div class="title">Hi</div>
+	
+		<div>ONE</div>
+		<div>TWO</div>
+		<div>THREE</div>
+		<div>FOUR</div>
+		<div>FIVE</div>
+	</div>
+</body>
+</html>

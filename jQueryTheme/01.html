@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme</title>
+	<script src="start/jquery-1.10.2.js"></script>
+	<script src="start/jquery-ui-1.10.4.custom.js"></script>
+	<link rel="stylesheet"  href="start/jquery-ui-1.10.4.custom.css"/>
+	<style>
+		#accordion{
+			width: 500px;
+		}
+	</style>
+
+	<script>
+		$(document).ready(function(){	
+			$("#accordion").accordion();
+		});
+	</script>
+</head>
+<body>
+	<div id="accordion">
+		<h3>Section 1</h3>
+		<div>
+		  <p>1번입니다.</p>
+		</div>
+		
+		<h3>Section 2</h3>
+		<div>
+		  <p>2번입니다.</p>
+		</div>
+		
+		<h3>Section 3</h3>
+		<div>
+		  <p>3번입니다.</p>
+		  <ul>
+			<li>one</li>
+			<li>two</li>
+			<li>three</li>
+		  </ul>
+		</div>
+	   
+		<h3>Section 4</h3>
+		<div>
+		  <p>4-1번</p>
+		  <p>4-2번</p>
+		</div>
+	</div>
+</body>
+</html>

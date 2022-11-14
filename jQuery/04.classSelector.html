@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 선택자</title>
+    <style>
+		.redtext{
+			color:#ff0000;
+		}
+		.boldtext{
+			font-weight:bold;
+		}
+		.spotlight{
+			background-color:#ffff00;
+		}
+    </style>
+	<script src="./jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".first").addClass("redtext");
+			$("div.first").addClass("spotlight");
+		});
+	</script>
+</head>
+<body>
+    <div class="first">사과</div>
+	<div>바나나</div>
+	<div>딸기</div>
+	<div>메론</div>
+	<br/><br/>
+	
+	<span class="first" >우유</span>
+	<span>쥬스</span>
+	<span>콜라</span>
+	<br/><br/>
+	
+	<label class="first">양파</label>
+	<label>당근</label>
+	<label>오이</label>
+</body>
+</html>

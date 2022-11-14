@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tag 선택자</title>
+    <style>
+		.redtext{ 
+			color:#FF0000; 
+		}
+
+		.italictext{ 
+			font-style:italic; 
+		}
+
+		.boldtext{
+			font-weight:bold;
+		}
+
+		.backgroundtext{
+			background:blue;
+		}
+    </style>
+	<script src="./jquery.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("*").addClass("redtext");
+			$("span").addClass("italictext");
+			$("div").addClass("boldtext");
+			$("div, span").addClass("backgroundtext");
+		});
+	</script>
+</head>
+<body>
+    <span>simple 문서 앨러먼트입니다.</span>
+	<br/><br/>
+	
+	<div>simple 문서 앨러먼트입니다.</div>
+	<br/><br/>
+	
+	<b>simple 문서 앨러먼트입니다.</b>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input 예제입니다</title>
+        <style>
+            table, th, tr, td {
+              border: 1px solid black;
+              border-collapse: collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            HTML의 고유기능 중 CSS로 대체 불가한 것들
+            <a href=""></a>
+            <img src="">
+            <input>
+            <form>
+            ******개발자 관점에서 가장 중요한 명령어들******
+        -->
+
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" value="Type Username" size="25"></td>
+            </tr>
+
+            <tr>
+                <td>Password</td>
+                <td><input type="password" size="25" maxlength="16"></td>
+            </tr>
+
+            <tr>
+                <td>Hidden</td>
+                <td><input type="hidden" value="1234" size="25"></td>
+            </tr>
+
+            <tr>
+                <td>Radio Type</td>
+                <td>
+                    <input type="radio" value="남자" name="gender"> 남자
+
+                    <input type="radio" value="여자" name="gender"> 여자
+                </td>
+            </tr>
+
+            <tr>
+                <td>Checkbox Type</td>
+                <td>
+                    <input type="checkbox" name="subject" value="java"> JAVA
+                    <input type="checkbox" name="subject" value="CLang"> C
+                    <input type="checkbox" name="subject" value="iPhone"> iPhone
+                    <input type="checkbox" name="subject" value="jsp"> JSP
+                </td>
+            </tr>
+
+            <tr>
+                <td>File Type</td>
+                <td>
+                    <input type="file" name="file">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Button Type</td>
+                <td>
+                    <input type="button" value="Send">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Cancel">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Color Type</td>
+                <td>
+                    <input type="color" name="myColor">
+                </td>
+            </tr>
+
+            <tr>
+                <td>Date Type</td>
+                <td>
+                    <input type="date" name="myDate">
+                </td>
+            </tr>
+        </table>
+        <br><br>
+
+        <table>
+            <tr>
+                <td>Select</td>
+                <td>
+                    <select name="fruit">
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="pineapple">Pineapple</option>
+                    </select>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Select</td>
+                <td>
+                    <select name="fruit2" size="2">
+                        <option value="apple">Apple</option>
+                        <option value="banana">Banana</option>
+                        <option value="pineapple">Pineapple</option>
+                        <option value="melon">Melon</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Text Area</td>
+                <td>
+                    <textarea rows="10" cols="100" name="con"></textarea>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

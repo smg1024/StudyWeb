@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theme</title>
+	<script src="start/jquery-1.10.2.js"></script>
+	<script src="start/jquery-ui-1.10.4.custom.js"></script>
+	<link rel="stylesheet"  href="start/jquery-ui-1.10.4.custom.css"/>
+
+	<script>
+		$(document).ready(function(){	
+			$("#date1").datepicker({
+				dateFormat:"y-mm-dd",                             			// 년도 2자리
+			
+				monthNames:["1월", "2월", "3월", "4월", "5월", "6월",
+							"7월", "8월", "9월","10월", "11월", "12월"],
+							
+				dayNamesMin:["일", "월", "화", "수", "목", "금", "토"],
+			});
+
+			$("#date2, #date3").datepicker({
+				dateFormat:"yy-mm-dd",                                       // 년도 3자리
+				monthNames:["1월", "2월", "3월", "4월", "5월", "6월",
+			            	"7월", "8월", "9월","10월", "11월", "12월"],
+			            
+				dayNamesMin:["일", "월", "화", "수", "목", "금", "토"]
+		});
+		
+		});
+	</script>
+</head>
+<body>
+	<div>
+		날짜 선택 : <input type="text" id="date1"/>
+		<br/><br/>
+		
+		조회 기간 : <input type="text" id="date2"/>
+		~ <input type="text" id="date3"/>
+		<br/><br/>
+	</div>
+</body>
+</html>

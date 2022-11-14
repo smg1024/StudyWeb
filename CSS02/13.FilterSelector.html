@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>필터 선택자 - 문자 블록</title>
+	<style>
+		#content, #apple{
+			width: 150px;
+		}
+
+		#content > li, #apple > li{
+			list-style-type: none;
+			border: solid 1px #cccccc;
+			font-size: 20px;
+			font-weight: bold;
+			background-color: #efefef;
+			height: 50px;
+			text-align: left;
+			line-height: 50px;
+			border-bottom-width: 0px;
+		}
+
+		#content a, #apple a{
+			text-decoration: none;
+		}
+
+		#content > li:first-child{ /* nth-child(1) */
+			background-color: green;
+			border-radius: 10px 10px 0px 0px;
+
+		}
+
+		#content > li:last-child{
+			background-color: aqua;
+			border-radius: 0px 0px 10px 10px;
+		}
+
+		#apple > li:nth-child(3){
+			background-color: darkmagenta;
+		}
+
+		#apple > li:nth-child(2n){  /* 짝수 */
+			background-color: tomato;
+		}
+
+		#content > li:nth-child(2n+1){   /* 홀수 */
+			background-color: palegreen;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<ul id="content">
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+			<li><a href="#">MENU7</a></li>
+			<li style="border-bottom-width: 1px;"><a href="#">MENU8</a></li>
+		</ul>
+	</div>
+
+	<div>
+		<ul id="apple">
+			<li><a href="#">MENU1</a></li>
+			<li><a href="#">MENU2</a></li>
+			<li><a href="#">MENU3</a></li>
+			<li><a href="#">MENU4</a></li>
+			<li><a href="#">MENU5</a></li>
+			<li><a href="#">MENU6</a></li>
+			<li><a href="#">MENU7</a></li>
+			<li style="border-bottom-width: 1px;""><a href="#">MENU8</a></li>
+		</ul>
+	</div>
+</body>
+</html>

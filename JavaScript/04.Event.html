@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>유효성 검사</title>
+    <script>
+        // 유효성 검사
+        function checkForm(createForm){     // createForm=this(form)
+            if(createForm.irum.value == ""){
+                alert("이름을 입력하세요.");
+                createForm.irum.focus();
+                return false;
+            }
+
+            if(createForm.siteurl.value == ""){
+                alert("이동할 사이트를 입력하세요.");
+                createForm.siteurl.focus();
+                return false;
+            }
+
+            var test=false;
+            for(i=0; i<createForm.fruit.length; i++){       // i가 4보다 작을떄
+                if(createForm.fruit[i].checked==true){      // fruit[0]
+                    test=true;
+                }
+            }
+
+            if(test==false){
+                alert("좋아하는 과일을 선택하세요.");
+                return false;
+            }
+
+            var count=0;
+            for(i=0; i<createForm.interest.length; i++){    // i=0 시작, i<4, i++
+                if(createForm.interest[i].checked == true){
+                    count++;
+                }
+            }
+
+            if(count==0){
+                alert("관심사를 하나 이상 체크하세요");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="http://www.google.com/" method="get" onsubmit="return checkForm(this)">
+        <label>이름을 입력하세요</label>
+        <input type="text" name="irum"> <!-- var irum="홍길동" -->
+        <br><br>
+
+        <label>이동할 웹사이트를 선택하세요</label>
+        <select name="siteurl"> <!-- var siteurl="http://www.naver.com"-->
+            <option></option>
+            <option value="http://www.naver.com/">네이버</option>
+            <option value="http://www.google.com/">구글</option>
+            <option value="http://www.daum.net/">다음</option>
+            <option value="http://www.multicampus.com/">멀티캠퍼스</option>
+        </select>
+        <br><br>
+
+        <label>좋아하는 과일을 선택하세요.</label> <!-- var fruit="apple" -->
+        
+        <input type="radio" name="fruit" value="apple">
+        <label>사과</label>
+        <input type="radio" name="fruit" value="banana">
+        <label>바나나</label>
+        <input type="radio" name="fruit" value="strawberry">
+        <label>딸기</label>
+        <input type="radio" name="fruit" value="pineapple">
+        <label>파인애플</label>
+        <br><br>
+
+        <label>관심사를 체크하세요</label>
+        
+        <input type="checkbox" name="interest" value="경제">
+        <label>경제</label>
+        <input type="checkbox" name="interest" value="IT">
+        <label>IT</label>
+        <input type="checkbox" name="interest" value="음악">
+        <label>음악</label>
+        <input type="checkbox" name="interest" value="미술">
+        <label>미술</label>
+        <br><br>
+
+        <input type="submit" value="확인">
+        <input type="reset" value="취소">
+    </form>
+</body>
+</html>

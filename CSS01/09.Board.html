@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>스타일 시트 예제</title>
+	<style>
+		div{
+			font-size: 14px;
+		}
+
+		.myBorder{
+			border-style: solid;
+			border-width: 2px;
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+		}
+
+		.myBorderStyle{
+			border-top-style: solid;
+			border-top-width: 5px;
+			border-top-color: brown;
+			
+			border-right-style: dotted;
+			border-right-width: 2px;
+			border-right-color: cyan;
+
+			border-bottom-style: groove;
+			border-bottom-width: 1px;
+			border-bottom-color: black;
+
+			border-left-style: double;
+			border-left-width: 4px;
+			border-left-color: yellowgreen;
+
+			width: 100px;
+			height: 100px;
+			text-align: center;
+			line-height: 100px;
+		}
+
+		span{
+			border-style: solid;
+			border-width: 5px;
+			width: 100px;
+			height: 100px;
+			display: block;  /* inline 태그들은 display: block 추가해야지 border를 그을 수 있다 */
+		}
+
+		.apple{
+			border-style: solid;
+			border-width: 5px;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<span>재미남!</span>
+	<br><br>
+
+	<div class="apple">신나요!!</div>
+	<br><br>
+
+	<div>연습입니다.</div>
+	<br/><br/>
+	
+	<div class="myBorder">연습입니다.</div>
+	<br/><br/>
+	
+	<div class="myBorderStyle">연습입니다.</div>
+	<br/><br/>
+</body>
+</html>

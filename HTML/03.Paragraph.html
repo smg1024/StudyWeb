@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>목록과 문단 예제입니다</title>
+    </head>
+
+    <body>
+        <p>
+            p태그는 문단을 정의하는 태그입니다
+            주로 본문에 사용되는 태그로써 단락을 구분함
+        </p>
+
+        <pre>
+            PRE 태그입니다
+            사용자가 작성한 내용 그대로     출력합니다
+            하
+            하
+            하
+            하
+            웹 문서를 소리로 읽어주는 기계나 점자로 표시해주는 기계는 PRE태그가 적용된 부분을 만나면 건너뛰어버립니다
+        </pre>
+
+        <p>목록 - 메뉴리스트</p>
+        <ol>
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+        </ol>
+
+        <ol start="50">
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+        </ol>
+
+        <ol type="A">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ol>
+
+        <p>목록 - 지역리스트</p>
+        <ul>
+            <li>서울</li>
+            <li>경기</li>
+            <li>충청</li>
+        </ul>
+
+        <ul style="list-style-type:square">
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <p>대분류 소분류</p>
+        <dl>
+            <dt>메뉴리스트</dt> <!--대분류-->
+            <dd>MENU1</dd> <!--소분류-->
+            <dd>MENU2</dd>
+            <dd>MENU3</dd>
+            <dd>MENU4</dd>
+        </dl>
+
+        <p><strong>HTML의 기능적 역할을 CSS가 대신할 수 없는 것들</strong></p>
+        <ol>
+            <li>
+                <a href="https://www.naver.com/">네이버 이동</a>
+            </li>
+            <li>
+                <a href="https://www.google.com/">구글 이동</a>
+            </li>
+            <li>
+                <a href="https://www.naver.com/" target="_blank">네이버 새 창으로 이동</a>
+            </li>
+            <li>
+                <a href="http://127.0.0.1:5500/HTML/01.Start.html">My Page</a>
+            </li>
+        </ol>
+
+        <p>DIV, SPAN 사용하는 이유 (Layout)</p>
+        <div>BLOCK</div>         <!-- block tag (줄이 바뀌는 태그) : p, div, ol, ul, li -->
+        <div>BLOCK</div>
+        <div>BLOCK</div>
+        <div>BLOCK</div>
+        <div>BLOCK</div>
+
+        <span>INLiNE</span>     <!-- inline-->
+        <span>INLiNE</span>
+        <span>INLiNE</span>
+        <span>INLiNE</span>
+        <br/>
+
+        
+    </body>
+</html>

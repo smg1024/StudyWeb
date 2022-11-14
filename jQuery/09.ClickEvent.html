@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        .smallimg{
+            width: 300px;
+            height: 300px;
+        }
+
+        .bigimg{
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+
+    <script src="./jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#big").click(function(){
+                $("img").removeClass("smallimg");
+                $("img").addClass("bigimg");
+            });
+
+            $("#small").click(function(){
+                $("img").removeClass("bigimg");
+                $("img").addClass("smallimg");
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <a href="#" id="big">확대</a>&nbsp;&nbsp;
+	<a href="#" id="small">원본</a>
+	<br /><br/>
+	
+	<img src="./../Images/pengsoo.jpg" width="300" height="300"/>
+</body>
+</html>

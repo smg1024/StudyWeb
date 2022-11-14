@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        function disp(){        // disp() 함수, 함수명은 변수명 규칙과 동일. (추후 Java에서 다룰 에정)
+            alert("어, 아직 싱글이야");
+        }
+
+        function aa(){
+            var value=confirm("정말로 제출하시겠습니까?");
+            // alert(value);
+
+            if(value==true){
+                // DB에 제출
+                alert("제출되었습니다.")
+            }else{
+                alert("취소되었습니다.");
+            }
+        }
+
+        function bb(){
+            var number=prompt("원하시는 숫자를 입력하세요.", "정수형 1~10까지 수만 입력하세요.");
+            alert(number);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="혼자야?" name="btn1" onclick="disp()">
+    <br><br><br>
+
+    <a href="#" style="text-decoration: none; margin-top: 100px;">
+        <span onclick="disp()">마우스 클릭</span>
+    </a>
+    <br><br><br>
+
+    <div onclick="disp()">신나는 금요일~~~!!</div>
+    <br><br><br>
+
+    <input type="button" value="확인1" name="btn2" onclick="aa()">
+    <input type="button" value="확인2" name="btn2" onclick="bb()">
+
+</body>
+</html>
