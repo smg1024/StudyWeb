@@ -12,7 +12,7 @@
 	<%
 	// post방식으로 전송할땐 한글을 인코딩해주어야한다.
 	request.setCharacterEncoding("UTF-8");
-	
+
 	// form의 데이터를 서버로 가져오기
 	String username = request.getParameter("username");
 	String password = request.getParameter("password");
