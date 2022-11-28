@@ -32,5 +32,13 @@
 		<li>Gender : <%=gender%></li>
 		<li>Location : <%=Arrays.toString(location)%></li>
 	</ul>
+	<hr>
+	<ol>
+		<li>Connected IP Address : <%= request.getRemoteAddr() %></li>
+		<li>Encoding : <%= request.getCharacterEncoding() %></li>
+		<li>ContentType : <%= request.getContentType() %></li>
+		<li>Method : <%= request.getMethod() %></li>
+		<li>HTTP Protocol : <%= request.getProtocol() %></li>
+	</ol>
 </body>
 </html>
