@@ -1,0 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<style>
+	.headerf{
+		height:100px; background:lightblue
+	}
+</style>
+<div class="headerf">Header Fragment(<%= tel %>)</div>
+<%
+	String name = "Sangmin Kim";
+	String addr = "Gangnam-gu, Seoul";
+%>
