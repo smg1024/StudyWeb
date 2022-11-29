@@ -50,10 +50,10 @@
 		int cnt = rs.getInt(1);	// count(username)의 결과값
 		/* if(cnt==1){	// 로그인 성공 -> 아이디, 비밀번호 일치
 			// 홈페이지로 이동
-			response.sendRedirect("/webApp/index.jsp");	//response.sendRedirect("/webApp");
+			response.sendRedirect(request.getContextPath() + "/index.jsp");	//response.sendRedirect("/webApp");
 		}else{	// 로그인 실패 -> 아이디, 비밀번호 중 1개 이상이 일치하지 않음
 			// 로그인 페이지로 이동
-			response.sendRedirect("/webApp/jsp02_response/login.jsp");
+			response.sendRedirect(request.getContextPath() + "/jsp02_response/login.jsp");
 		} */
 		
 		// Client에게 로그인 성공여부 대화상자 띄워주기
@@ -62,7 +62,7 @@
 			<script>
 				alert("Sign in complete. Proceeding to website...");
 				// document, location, history, window, screen... --> JS 명령어들
-				location.href="/webApp/index.jsp";
+				location.href = request.getContextPath();
 			</script>
 			<%
 		}else{

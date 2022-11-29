@@ -13,9 +13,9 @@
 	post방식 : 변수값을 url에 표시 안 하게 하면서 데이터를 전송하는 방법
 	action="도메인+경로+파일" : form내에서 submit 발생하면 접속할 주소
 </pre>
-<form method="post" action="/webApp/jsp01_request/formRequestOk.jsp">
+<form method="post" action="<%= request.getContextPath() %>/jsp01_request/formRequestOk.jsp">
 	Username : <input type="text" name="username"><br>
-	Password : <input type="text" name="password"><br>
+	Password : <input type="password" name="password"><br>
 	Name : <input type="text" name="name"><br>
 	Memo : <textarea name="memo"></textarea><br>
 	Interest :  

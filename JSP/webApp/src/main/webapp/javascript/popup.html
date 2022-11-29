@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>popup.html</title>
+<style>
+	img{width:90%;}
+</style>
+<script>
+	function popupClose(){
+		// checkbox 선택된 경우 쿠키에 정보 기록
+		var check = document.getElementById("check").checked;	// boolean: check=true
+		if(check){
+			// popup쿠키변수, popOpen은 값, path는 쿠키값이 저장되는 위치
+			// expires는 쿠키의 생명주기
+			var now = new Date();
+			// 년 : getFullYear(), 월 : getMonth()+1, 일 : getDate()
+			// 시 : getHours(), 분 : getMinutes(), 초 : getSeconds()
+			// 요일 : getDay() -> 일요일 시작
+			
+			
+			// 내일 현재시각으로 날짜 변경
+			now.setDate(now.getDate()+1);
+			
+			document.cookie = "popup=popOpen;path=/;expires="+now+";";
+		}
+		
+		// 창 닫기
+		window.close();	// self.close();
+	}
+</script>
+</head>
+<body>
+<h2>Pop-up Page</h2>
+<img src="../img/candle.jpg">
+<hr>
+<input type="checkbox" id="check">하루 동안 안 보기
+<input type="button" value="Close" onclick="popupClose()">
+</body>
+</html>

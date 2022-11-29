@@ -39,6 +39,12 @@
 		<li>ContentType : <%= request.getContentType() %></li>
 		<li>Method : <%= request.getMethod() %></li>
 		<li>HTTP Protocol : <%= request.getProtocol() %></li>
+		<li>URI : <%= request.getRequestURI() %></li>	<!-- context명, 경로, 파일명 -->
+		<li>ContextPath : <%= request.getContextPath() %>	<!-- context->/webApp form action에 파일경로 넣을때 사용 가능-->
+		<li>Server name : <%= request.getServerName() %></li>	<!-- Domain, ip -->
+		<li>Port : <%= request.getServerPort() %></li>
+		<li>Servlet Context : <%= request.getServletContext().getRealPath("/img") %></li>
+		<li>Query : <%= request.getQueryString() %></li>	<!-- get방식의 쿼리문 -->
 	</ol>
 </body>
 </html>

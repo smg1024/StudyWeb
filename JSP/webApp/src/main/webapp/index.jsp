@@ -43,7 +43,8 @@ public int sum(int max){
 <script src="./css_js/script.js"></script>
 </head>
 <body>
-<a href="/webApp/jsp02_response/login.jsp">로그인</a>
+<a href="/webApp/jsp02_response/login.jsp">로그인</a><br>
+<a href="<%= request.getContextPath() %>/jsp01_request/formRequest.jsp">회원가입</a><br>
 <%
 	// 스크립트릿 Scriptlet : 변수선언, 기본명령어(if, for, while, 객체생성, 배열)
 	int a = 1234;

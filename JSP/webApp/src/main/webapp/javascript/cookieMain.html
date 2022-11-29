@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>cookieMain.html</title>
+</head>
+<script>
+	function popupShow(){
+		// 팝업창을 쿠키정보 확인 후 띄워준다
+		var cookie = document.cookie;	// "popup=popOpen"
+		if(cookie.indexOf("popOpen")==-1){	// 없으면 -1, 있으면 0 혹은 양수
+			// 새 창에 표시될 컨텐츠, 창 이름, 옵션
+			window.open("popup.html", "popup", "width=400, height=670, left=200, top=200");
+		}
+	}
+</script>
+<body onload="popupShow()">
+<h1>Cookie Main Page</h1>
+<img src="../img/flower.jpg" width="80%">
+</body>
+</html>
