@@ -13,7 +13,9 @@
 	
 	for(int i=0; i<coo.length; i++){
 		%>
-		<li><%= coo[i].getName() %>=<%= coo[i].getValue() %>, <%= coo[i].getMaxAge() %></li>
+		<ul>
+			<li><%= coo[i].getName() %>=<%= coo[i].getValue() %>, <%= coo[i].getMaxAge() %></li>
+		</ul>
 		<%
 	}
 %>

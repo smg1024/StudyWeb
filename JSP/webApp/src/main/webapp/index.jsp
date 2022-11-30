@@ -33,7 +33,7 @@ public int sum(int max){
 <%
 	String tel = "010-1234-5678";
 %>
-<title>221125 Scriptlet</title>
+<title>index.jsp</title>
 <link rel="stylesheet" href="./css_js/style.css" type="text/css">
 <style>
 	hr{border:1px solid red;}
@@ -44,13 +44,14 @@ public int sum(int max){
 <script src="./css_js/script.js"></script>
 </head>
 <body>
+	<h1 style="background:pink"><a href="/webApp/board/boardList.jsp">Board</a></h1>
 	<!-- 예외가 발생하면 errorPage.jsp로 이동 설정 -->
 	<!-- 1. 지시부에 예외 발생 시 이동할 페이지정보를 기술한다. -->
 	<!-- 2. 에러 발생 시 실행될 페이지에 지시부를 기술한다. -->
-	<%
-		//String numStr = request.getParameter("num");
-		//int num = Integer.parseInt(numStr);	// num값이 null일때 errorPage로 이동
-	%>
+	<%--
+		String numStr = request.getParameter("num");
+		int num = Integer.parseInt(numStr);	// num값이 null일때 errorPage로 이동
+	--%>
 	<h1>Session값 확인</h1>
 	<div>
 		Username : <%= session.getAttribute("username") %><br>
@@ -66,10 +67,20 @@ public int sum(int max){
 		준비사항<br>
 		1. https://tomcat.apache.org/taglibs/standard -> taglibs -> Apache Standard Taglib binary
 		-> jakarta-taglibs-standard-1.1.2.zip 다운로드
-		
+		<br>
 		2. 다운로드한 파일을 압축 해제 후
 		../jakarta-taglibs-standard-1.1.2/lib 에서 jstl.jar, standard.jar파일을 이클립스의 WEB-INF/lib 폴더에 복사
 	</div>
+	<ol>
+		<li><a href="/webApp/jsp07_jstl/jstl01_setTag.jsp">setTag : 변수 선언/삭제</a></li>
+		<li><a href="/webApp/jsp07_jstl/jstl02_ifTag.jsp?name=Sangmin&age=24&lastname=Kim">ifTag : 조건문</a></li>
+		<li><a href="./jsp07_jstl/jstl03_forEachTag.jsp">forEachTag : 반복문</a></li>
+		<li><a href="./jsp07_jstl/jstl04_forTokensTag.jsp">forTokensTag : 특정 문자로 쪼개기</a></li>
+		<li><a href="./jsp07_jstl/jstl05_chooseTag.jsp?name=kim&age=24">chooseTag : 다중 if문, switch문</a></li>
+		<li><a href="./jsp07_jstl/jstl06_urlTag.jsp">urlTag : url주소와 데이터처리</a></li>
+		<li><a href="./jsp07_jstl/jstl07_redirectTag.jsp">redirectTag : 자동으로 포워딩</a></li>
+	</ol>
+	<hr>
 	<%
 		// 스크립트릿 Scriptlet : 변수선언, 기본명령어(if, for, while, 객체생성, 배열)
 		int a = 1234;
