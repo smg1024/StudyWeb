@@ -1,5 +1,13 @@
+<%@page import="com.multi.app.board.BoardDTO"%>
+<%@page import="java.util.List"%>
+<%@page import="com.multi.app.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%
+	// 게시판 목록에서 DB조회
+	BoardDAO dao = new BoardDAO();
+	List<BoardDTO> lst = dao.boardListAll();
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,6 +41,12 @@
 		width:15%;
 		/* background:blue; */
 	}
+	
+	.wordCut{
+		white-spce:nowrap;	/* 줄 안바꾸기 */
+		overflow:hidden;	/* 넘친 데이터 숨기기 */
+		text-overflow:ellipsis;	/* ...표시하기 */
+	}
 </style>
 </head>
 <body>
@@ -48,17 +62,27 @@
 			<li>Hit</li>
 			<li>Date</li>
 			
-			<li>10</li>
-			<li>How to~</li>
-			<li>Sangmin</li>
-			<li>0</li>
-			<li>MM-DD hh:mm</li>
+			<%-- <%
+				for(int i=0; i<lst.size(); i++){	// List에 담긴 ResultSet 데이터를 반복문으로 출력
+					BoardDTO dto = lst.get(i);
+			%>
+					<li><%= dto.getPostno() %></li>
+					<li><%= dto.getSubject() %></li>
+					<li><%= dto.getUsername() %></li>
+					<li><%= dto.getHitcount() %></li>
+					<li><%= dto.getRegdate() %></li>
+			<%
+				}
+			%> --%>
 			
-			<li>9</li>
-			<li>What is~</li>
-			<li>John</li>
-			<li>5</li>
-			<li>MM-DD hh:mm</li>
+			<!-- jstl로 목록 출력하기 -->
+			<c:forEach var="dto2" items="<%= lst %>">
+				<li>${ dto2.postno }</li>
+				<li class="wordCut"><a href="/webApp/board/boardView.jsp?postno=${ dto2.postno }">${ dto2.subject }</a></li>	<!-- 글 제목에 해당 글 내용 조회페이지 링크등록 -->
+				<li>${ dto2.username }</li>
+				<li>${ dto2.hitcount }</li>
+				<li>${ dto2.regdate }</li>
+			</c:forEach>
 		</ul>
 	</div>
 </body>
