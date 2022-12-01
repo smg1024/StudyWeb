@@ -9,7 +9,7 @@
 	.container{
 		width:1000px;
 		margin:0 auto;
-		background:#ddd;
+		/* background:#ddd; */
 	}
 	ul, li{
 		margin:0;
@@ -38,6 +38,9 @@
 <body>
 	<div class="container">
 		<h1>Board List</h1>
+		<div>
+			<a href="/webApp/board/boardWrite.jsp">New</a>
+		</div>
 		<ul id="lst">
 			<li>No.</li>
 			<li>Title</li>

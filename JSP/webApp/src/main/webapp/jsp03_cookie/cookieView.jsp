@@ -19,5 +19,6 @@
 		<%
 	}
 %>
+<a href="/webApp/jsp03_cookie/deleteCookie.jsp">쿠키 삭제하기</a>
 </body>
 </html>

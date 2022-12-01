@@ -36,7 +36,6 @@
 		<input type="checkbox" name="location" value="Ulsan">Ulsan<br>
 		<input type="submit" value="Subimt">
 		<input type="button" value="Send">	<!-- 이건 아무 기능 없는 버튼 -->
-	
 </form>
 </body>
 </html>
