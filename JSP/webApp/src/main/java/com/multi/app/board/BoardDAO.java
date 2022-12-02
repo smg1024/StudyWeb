@@ -133,4 +133,22 @@ public class BoardDAO extends DBConn{
 	}
 	
 	// 글 삭제
+	public int boardDel(int postno) {
+		int result = 0;
+		try {
+			dbConn();
+			
+			sql = "DELETE FROM board_tbl WHERE postno=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, postno);
+			
+			result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return result;
+	}
 }

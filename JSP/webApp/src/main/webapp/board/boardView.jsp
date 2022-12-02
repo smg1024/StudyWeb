@@ -40,25 +40,50 @@
 		width:90%;
 	}
 </style>
+<script>
+	// 현재 글 삭제 확인 함수
+	// yes : 삭제, no : 취소
+	function verifyDel(){
+		// 대화상자 : alert, confirm, prompt
+		// alert() -> 통보, 확인버튼 1개
+		// alert("확인 대화상자");
+		
+		// confirm() -> 확인, 예(true)/아니오(false)
+		// confirm("confirm");
+		
+		// prompt() -> 값을 입력할 수 있음
+		// prompt("prompt", "John Smith");
+		
+		if(confirm("Are you sure you want to delete the post?")){
+			// 삭제를 구현하는 페이지로 데이터를 가지고 이동한다
+			location.href = "/webApp/board/boardDel.jsp?postno=<%= dto.getPostno() %>";
+		}
+	}
+</script>
 </head>
 <body>
 	<div class="container">
 		<h1>View post content</h1>
-		<ul>
-			<li>Post No.</li>
-			<li><%= dto.getPostno() %></li>
-			<li>Author</li>
-			<li><%= dto.getUsername() %>, Date: <%= dto.getRegdate() %>, Views: <%= dto.getHitcount() %></li>
-			<li>Title</li>
-			<li><%= dto.getSubject() %></li>
-			<li>Content</li>
-			<li><%= dto.getContent() %></li>
-		</ul>
-		<div>
-			<a href="/webApp/board/boardEdit.jsp?postno=<%= dto.getPostno() %>">Edit</a>
-			Delete
-			<a href="/webApp/board/boardList.jsp">List</a>
-		</div>
+		<% if(dto.getSubject()!=null){ %>
+			<ul>
+				<li>Post No.</li>
+				<li><%= dto.getPostno() %></li>
+				<li>Author</li>
+				<li><%= dto.getUsername() %>, Date: <%= dto.getRegdate() %>, Views: <%= dto.getHitcount() %></li>
+				<li>Title</li>
+				<li><%= dto.getSubject() %></li>
+				<li>Content</li>
+				<li><%= dto.getContent() %></li>
+			</ul>
+			<div>
+				<a href="/webApp/board/boardEdit.jsp?postno=<%= dto.getPostno() %>">Edit</a>
+				<a href="javascript:verifyDel()">Delete</a>	<!-- a태그의 href속성값에 javascript:function()을 쓰면 자바스크립트 함수를 호출한다 -->
+				<a href="/webApp/board/boardList.jsp">List</a>
+			</div>
+		<% }else{
+			out.println("<h2>The post doesn't exist.</h2>");
+		} %>
+		
 	</div>
 </body>
 </html>

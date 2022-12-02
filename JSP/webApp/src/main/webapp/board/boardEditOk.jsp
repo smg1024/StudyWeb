@@ -14,19 +14,21 @@
 	dto.setContent(request.getParameter("content"));
 %>
 
+<jsp:useBean id="dto2" class="com.multi.app.board.BoardDTO" scope="page"></jsp:useBean>
+<jsp:setProperty name="dto2" property="*"></jsp:setProperty>
+
 <%
 	BoardDAO dao = new BoardDAO();
-	int result = dao.boardEdit(dto);
+	int result = dao.boardEdit(dto2);
 	
 	if(result>0){	// 수정성공 시 해당 postno 받아서 내용보기
-		response.sendRedirect("/webApp/board/boardView.jsp?postno=" + dto.getPostno());
+		response.sendRedirect("/webApp/board/boardView.jsp?postno=" + dto2.getPostno());
 	}else{	// 수정실패 시 글 수정 페이지 이동
 		%>
 		<script>
-			alert("Failed to edit.");
+			alert("Failed to edit post.");
 			history.back();
 		</script>
 		<%	
 	}
 %>
-<%-- <jsp:useBean id="dto2" class="com.multi.app.board.BoardDTO" scope="page"></jsp:useBean> --%>
