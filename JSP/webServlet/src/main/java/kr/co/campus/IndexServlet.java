@@ -75,7 +75,6 @@ public class IndexServlet extends HttpServlet {
 			pw.println(logName + "님 <a href='"+request.getContextPath()+"/logout.do'>로그아웃</a><br>");
 		}
 		
-		
 //		pw.println("번호: "+num+"<br>");
 //		pw.println("이름: "+name+"<br>");
 		pw.println("</body>");

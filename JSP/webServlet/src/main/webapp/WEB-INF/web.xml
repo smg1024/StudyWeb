@@ -27,7 +27,7 @@
      Welcome to Tomcat
   </description>
   
-    <servlet>
+  <servlet>
   	<servlet-name>home</servlet-name>
   	<servlet-class>kr.co.campus.IndexServlet</servlet-class>
   </servlet>

@@ -63,7 +63,7 @@
 			<script>
 				alert("Sign in complete. Proceeding to website...");
 				// document, location, history, window, screen... --> JS 명령어들
-				location.href = request.getContextPath();
+				location.href = "<%= request.getContextPath() %>";
 			</script>
 			<%
 		}else{

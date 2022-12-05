@@ -78,7 +78,7 @@
 			<!-- jstl로 목록 출력하기 -->
 			<c:forEach var="dto2" items="<%= lst %>">
 				<li>${ dto2.postno }</li>
-				<li class="wordCut"><a href="/webApp/board/boardView.jsp?postno=${ dto2.postno }">${ dto2.subject }</a></li>	<!-- 글 제목에 해당 글 내용 조회페이지 링크등록 -->
+				<li class="wordCut"><a href="/webApp/board/boardView.jsp?postno=${ dto2.postno }&part=1">${ dto2.subject }</a></li>	<!-- 글 제목에 해당 글 내용 조회페이지 링크등록 -->
 				<li>${ dto2.username }</li>
 				<li>${ dto2.hitcount }</li>
 				<li>${ dto2.regdate }</li>

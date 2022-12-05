@@ -22,7 +22,7 @@
 	int result = dao.boardEdit(dto2);
 	
 	if(result>0){	// 수정성공 시 해당 postno 받아서 내용보기
-		response.sendRedirect("/webApp/board/boardView.jsp?postno=" + dto2.getPostno());
+		response.sendRedirect("/webApp/board/boardView.jsp?postno=" + dto.getPostno() + "&part=2");
 	}else{	// 수정실패 시 글 수정 페이지 이동
 		%>
 		<script>

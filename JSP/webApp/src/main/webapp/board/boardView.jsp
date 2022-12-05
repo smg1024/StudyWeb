@@ -8,12 +8,13 @@
 	// 제목 선택 시 보내준 postno를 request한다
 	
 	int postno = Integer.parseInt(request.getParameter("postno"));
+	int part = Integer.parseInt(request.getParameter("part"));
 	
 	// postno에 해당되는 데이터를 DB에서 선택해야한다
 	BoardDAO dao = new BoardDAO();
 	
 	// 데이터 선택, 조회수 +1
-	BoardDTO dto = dao.boardSelectOne(postno, 1);
+	BoardDTO dto = dao.boardSelectOne(postno, part);
 %>
 
 <!DOCTYPE html>
