@@ -6,4 +6,4 @@
 	}
 </style>
 <div id="f">Footer</div>
-<%-- <%= // name %>	 includeMain_jsp.jsp에서 선언된 name은 호환되지 않음 --%>
+<%-- <%= name %>	 includeMain_jsp.jsp에서 선언된 name은 호환되지 않음 --%>

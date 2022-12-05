@@ -54,5 +54,21 @@
   	<url-pattern>/logout.do</url-pattern>
   </servlet-mapping>
   
+  <servlet>
+  	<servlet-name>init</servlet-name>
+  	<servlet-class>kr.co.campus.InitServlet</servlet-class>
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>Sangmin Kim</param-value>
+  	</init-param>
+  	<init-param>
+  		<param-name>addr</param-name>
+  		<param-value>서울시 강남구</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>init</servlet-name>
+  	<url-pattern>/init.do</url-pattern>
+  </servlet-mapping>
 
 </web-app>
