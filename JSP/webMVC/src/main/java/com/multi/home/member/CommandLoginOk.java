@@ -10,11 +10,11 @@ import javax.servlet.http.HttpSession;
 import com.multi.home.CommandService;
 
 public class CommandLoginOk implements CommandService {
-	MemberDAO dao = new MemberDAO();
-	MemberVO vo = new MemberVO();
 	
 	@Override
 	public String process(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		MemberDAO dao = new MemberDAO();
+		MemberVO vo = new MemberVO();
 		
 		vo.setUsername(req.getParameter("username"));
 		vo.setPassword(req.getParameter("password"));
