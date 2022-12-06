@@ -13,9 +13,10 @@
 			<a href="<%= request.getContextPath() %>/member/login.do">로그인</a>
 		</c:if>
 		<c:if test="${ logUsername!=null && logUsername!='' }">
-			${ logName }님 반갑습니다! <a href="<%= request.getContextPath() %>/member/logout.do">로그아웃</a>
+			${ logName }님 반갑습니다!<br>
+			<a href="<%= request.getContextPath() %>/member/logout.do">로그아웃</a>
 		</c:if>
-		<a href="board/board.do">게시판</a>
+		<a href="<%= request.getContextPath() %>/board/boardList.do">게시판</a>
 	</div>
 	<h1>MVC패턴을 이용한 홈페이지</h1>
 	<ol>

@@ -7,7 +7,8 @@ public class MemberDAO extends DBConn {
 		try {
 			dbConn();
 			
-			sql = "SELECT username, name FROM member_tbl WHERE username=? AND password=?";
+			sql = "SELECT username, name FROM member_tbl "
+					+ "WHERE username=? AND password=?";
 			pstmt = conn.prepareStatement(sql);
 			
 			pstmt.setString(1, vo.getUsername());

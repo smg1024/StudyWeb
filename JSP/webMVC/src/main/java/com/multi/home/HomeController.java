@@ -38,7 +38,7 @@ public class HomeController extends HttpServlet {
 		Properties propObject = new Properties();
 		try {
 			FileInputStream fis = new FileInputStream(propertiesFileName);
-			propObject.load(fis);
+			propObject.load(fis);	// '='을 기준으로 key/value를 나눈다
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -56,7 +56,7 @@ public class HomeController extends HttpServlet {
 				String key = (String)keyList.nextElement();	// key값 가져오기 ex)"*.do", "index.do"
 				String className = propObject.getProperty(key);	// value값 가져오기 ex)"com.multi.home.CommandIndex"
 				
-				System.out.println(key + "=" + className);
+//				System.out.println(key + "=" + className);
 				
 				// 패키지와 클래스명이 문자열로 되어있는 경우, Class객체로 생성할 수 있다.
 				Class commandClass = Class.forName(className);
