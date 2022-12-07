@@ -68,7 +68,6 @@
 					<input type="image" src="/webMVC/img/google.gif">
 					<input type="reset" value="초기화">
 					<input type="button" value="취소" onclick="history.back()">
-					<a href="javascript:window.history.back()">취소</a>
 				</li>
 			</ul>
 		</form>

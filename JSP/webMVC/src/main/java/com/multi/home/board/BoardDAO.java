@@ -106,7 +106,6 @@ public class BoardDAO extends DBConn implements BoardDAOInterface{
 	}
 	
 	// 글 수정
-	
 	@Override
 	public int boardEdit(BoardVO vo) {
 		int result = 0;

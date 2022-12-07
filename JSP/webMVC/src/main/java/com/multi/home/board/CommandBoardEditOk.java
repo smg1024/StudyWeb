@@ -1,4 +1,4 @@
- package com.multi.home.board;
+package com.multi.home.board;
 
 import java.io.IOException;
 
