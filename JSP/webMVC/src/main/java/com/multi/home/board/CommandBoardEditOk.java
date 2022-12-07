@@ -1,4 +1,4 @@
-package com.multi.home.board;
+ package com.multi.home.board;
 
 import java.io.IOException;
 
@@ -23,7 +23,7 @@ public class CommandBoardEditOk implements CommandService {
 		BoardDAO dao = BoardDAO.getInstance();
 		
 		req.setAttribute("result", dao.boardEdit(vo));
-		req.setAttribute("vo", vo);
+		req.setAttribute("postno", vo.getPostno());
 		
 		return "/board/boardEditOk.jsp";
 	}

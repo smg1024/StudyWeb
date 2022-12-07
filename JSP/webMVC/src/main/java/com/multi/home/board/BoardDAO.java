@@ -196,4 +196,35 @@ public class BoardDAO extends DBConn implements BoardDAOInterface{
 		}
 		return postCount;
 	}
+	
+	// 글 선택 삭제
+	@Override
+	public int boardMultiDel(int[] postno, String username) {
+		int result = 0;
+		
+		try {
+			dbConn();
+			
+			sql = "DELETE FROM board_tbl WHERE username=? and postno IN (?";
+			for(int i=1; i<postno.length; i++) {
+				sql += ",?";
+			}
+			sql += ")";
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, username);
+			for(int i=0; i<postno.length; i++) {
+				pstmt.setInt(i+2, postno[i]);
+			}
+			
+			result = pstmt.executeUpdate();
+		}catch(Exception e) {
+			System.out.println("글 선택 삭제 예외");
+			e.printStackTrace();
+		}finally {
+			dbClose();
+		}
+		
+		return result;
+	}
 }

@@ -20,33 +20,34 @@
 </style>
 <script>
 	//form의 버튼을 클릭하면 호출되는 함수
-	function boardEditFormClick(){
+	function boardEditFormCheck(){
 		// 제목이 비어있을때
 		var subj = document.getElementById("subject");
 		if(document.getElementById("subject").value==""){
 			alert("제목을 입력하세요.");
 			subj.focus();	// 커서 위치 지정
-			return;	// 함수 실행 종료
+			return false;	// 함수 실행 종료
 		}
 		// 내용이 비어있을때
 		var content = document.getElementById("content");
 		if(document.getElementById("content").value==""){
 			alert("내용을 입력하세요.");
 			content.focus();
-			return;
+			return false;
 		}
 		
+		return true;
 		// 모두 입력됐을때 form태그의 action지정
-		var form = document.getElementById("boardEditForm");
+		/* var form = document.getElementById("boardEditForm");
 		form.action = "/webMVC/board/boardEditOk.do";
-		form.submit();
+		form.submit(); */
 	}
 </script>
 </head>
 <body>
 	<div class="container">
 		<h1>게시판 수정하기 form</h1>
-		<form method="post" id="boardEditForm">
+		<form method="post" action="/webMVC/board/boardEditOk.do" onsubmit="return boardEditFormCheck()"> <!-- id="boardEditForm" -->
 			<input type="hidden" name="postno" value="${ vo.postno }">
 			<ul>
 				<li>제목</li>
@@ -55,7 +56,20 @@
 				<li>
 					<textarea name="content" id="content">${ vo.content }</textarea>
 				</li>
-				<li><input type="button" value="글 수정" onclick="boardEditFormClick()"></li>
+				<li>
+					<!-- 
+						submit 기능을 가지고 있는 태그
+						<input type="submit">
+						<button>
+						<input type="image">
+					 -->
+					<button>글 수정</button>
+					<!-- <input type="button" value="글 수정" onclick="boardEditFormClick()"> -->
+					<input type="image" src="/webMVC/img/google.gif">
+					<input type="reset" value="초기화">
+					<input type="button" value="취소" onclick="history.back()">
+					<a href="javascript:window.history.back()">취소</a>
+				</li>
 			</ul>
 		</form>
 	</div>

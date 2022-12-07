@@ -32,7 +32,7 @@ public class CommandBoardPostOk implements CommandService {
 		
 		// View페이지에서 result
 		req.setAttribute("result", dao.boardPost(vo));
-		req.setAttribute("vo", vo);
+		req.setAttribute("postno", vo.getPostno());
 		
 		// return을 jsp밖에 못하기 때문에 여기에서 실행결과에 따라 나눠서 할 수 없음
 		// history.back()을 하지 못함

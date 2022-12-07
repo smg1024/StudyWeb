@@ -37,11 +37,8 @@
 			<c:if test="${ logUsername==vo.username }">
 				<a href="<%= request.getContextPath() %>/board/boardEdit.do?postno=${ vo.postno }">수정</a>
 				<a href="javascript:confirmDelete()">삭제</a>
-				<a href="<%= request.getContextPath() %>/board/boardList.do">목록</a>
 			</c:if>
-			<c:if test="${ logUsername!=vo.username }">
-				<a href="<%= request.getContextPath() %>/board/boardList.do">목록</a>
-			</c:if>
+			<a href="<%= request.getContextPath() %>/board/boardList.do">목록</a>
 		</div>
 	</div>
 </body>

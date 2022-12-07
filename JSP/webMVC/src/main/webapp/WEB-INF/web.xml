@@ -39,5 +39,12 @@
   	<servlet-name>homeController</servlet-name>
   	<url-pattern>*.do</url-pattern> <!-- 무조건 HomeController로 연결 -->
   </servlet-mapping>
+  
+  <jsp-config>
+  	<jsp-property-group>
+  		<url-pattern>*.jsp</url-pattern>
+  		<include-prelude>/include/menu.jspf</include-prelude>
+  	</jsp-property-group>
+  </jsp-config>
 
 </web-app>

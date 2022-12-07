@@ -23,4 +23,7 @@ public interface BoardDAOInterface {
 	
 	// 글 총 개수
 	public int postCount();
+	
+	// 글 선택 삭제
+	public int boardMultiDel(int[] postno, String username);
 }
